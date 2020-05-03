@@ -17,6 +17,9 @@ p2 = multiprocessing.Process(target=do_something)
 p1.start()
 p2.start()
 
+p1.join()
+p2.join()
+
 finish = time.perf_counter()
 
-print(f'Finisged in {round(finish-start, 4)} second(s)')
+print(f'Finished in {round(finish-start, 4)} second(s)')

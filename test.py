@@ -26,4 +26,4 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 # for thread in threads:
 #     thread.join()
 finish = time.perf_counter()
-print(f'Finished in {round(finish-start, 3)} second(s)')
+print(f'Finished in {round(finish-start, 4)} second(s)')

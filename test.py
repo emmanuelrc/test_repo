@@ -13,4 +13,6 @@ do_something()
 
 finish = time.perf_counter()
 
-print(f'Finisged in {round(finish-start, 3)} second(s)')
+
+print(f'Finisged in {round(finish-start, 4)} second(s)')
+

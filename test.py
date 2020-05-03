@@ -18,4 +18,4 @@ p2.start()
 
 finish = time.perf_counter()
 
-print(f'Finisged in {round(finish-start, 2)} second(s)')
+print(f'Finisged in {round(finish-start, 4)} second(s)')

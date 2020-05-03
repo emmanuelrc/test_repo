@@ -12,8 +12,6 @@ def do_something():
 do_something()
 do_something()
 
-
 finish = time.perf_counter()
-
 
 print(f'Finisged in {round(finish-start, 2)} second(s)')

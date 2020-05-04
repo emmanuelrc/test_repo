@@ -34,7 +34,7 @@ def process_image(img_name):
     img.save(f'processed/{img_name}')
     print(f'{img_name} was processed...')
 
-with concurrent.futures.ProcessPoolExecutor() as executor:
+with concurrent.futures.ThreadPoolExecutor() as executor:
     executor.map(process_image, img_names)
 
 t2 = time.perf_counter()

@@ -4,7 +4,7 @@ import concurrent.futures
 from PIL import Image, ImageFilter
 
 img_names = [
-    'photo-1516117172878-fd2c41f4a759.jpg',
+    'photo-1549692520-acc6669e2f0c.jpg',
     'photo-1532009324734-20a7a5813719.jpg',
     'photo-1524429656589-6633a470097c.jpg',
     'photo-1530224264768-7ff8c1789d79.jpg',
@@ -34,7 +34,7 @@ def process_image(img_name):
     img.save(f'processed/{img_name}')
     print(f'{img_name} was processed...')
 
-with concurrent.futures.ThreadPoolExecutor() as executor:
+with concurrent.futures.ProcessPoolExecutor() as executor:
     executor.map(process_image, img_names)
 
 t2 = time.perf_counter()
